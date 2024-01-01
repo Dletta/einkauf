@@ -50,10 +50,10 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(
         /* add any other offline resources here */
       addResourcesToCache([
-        './',
-        './index.html',
-        './index.css',
-        './index.js'
+        '/einkauf/',
+        '/einkauf/index.html',
+        '/einkauf/index.css',
+        '/einkauf/index.js'
       ])
     )
   })
