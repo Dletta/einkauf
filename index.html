@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einkauf</title>
-    <link rel="canonical" href="https://dletta.github.io/einkauf/">
-    <link rel="manifest" href="/einkauf/manifest.json">
-    <link rel="stylesheet" href="/einkauf/index.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="index.css">
 </head>
+<!-- Initial Arrival Design -->
 <body>
-    <div id="cont" class="swiper">
-        <div id="default" class="cont">
+    <div id="menu" class="menu">
+        <div id="board-switch" class="menu-item">📜</div>
+        <div id="sync" class="menu-item">🔃</div>
+        <div id="settings" class="menu-item">⚙️</div>
+        <div id="share" class="menu-item">✉️</div>
+    </div>
+    <div id="preferences" class="preferences">
+        <div class="menu-pref">
+            <div class="title-list">Settings</div>
+            <div id="close-ref" class="close">❌</div>
+        </div>
+        <div class="title-list-smaller">Profile Name</div>
+        <div class="list">
+            <input type="text" id="profile-name" placeholder="shared-family-lists" class="input-smaller">
+            <div style="text-align: center;font-size: 15px;padding: 5px;color: #5685ff;">
+                Specify a unique name which will be used to connect
+                to others. <br><span style="font-weight: bold;">Only share with those who you want to have access to your lists.</span>
+            </div>
+        </div>
+        <div class="title-list-smaller">List Manager</div>
+        <div id="manage-lists" class="list">
+            <div id="create-list" class="list-el-last">➕ Create a List</div>
+        </div>
+    </div>
+    <div id="share" class="share">
+
+    </div>
+    <div id="list-container" class="swiper">
+        <!-- For Reference 
+        <div id="groceries" class="einkauf-active">
             <div id="listname" class="title-list">Groceries</div>
             <input type="text" id="input" placeholder="Carrots">
-            <div id="title-active" class="title-list">Please Pick Up</div>
+            <div id="title-active" class="title-list-smaller">Please Pick Up</div>
             <div id="list-active" class="list">
                 <div id="empty" class="list-el">Nothing to get yet</div>
                 <div id="empty" class="list-el">Nothing to get yet</div>
@@ -24,13 +52,13 @@
                 <div id="empty" class="list-el">Nothing to get yet</div>
                 <div id="empty" class="list-el-last">Nothing to get yet</div>
             </div>
-            <div id="title-past" class="title-list">We Got Before</div>
+            <div id="title-past" class="title-list-smaller">We Got Before</div>
             <div id="list-past" class="list">
                 <div id="empty" class="list-el">Nothing gotten yet</div>
                 <div id="empty" class="list-el-last">Nothing to get yet</div>
             </div>
         </div>
-        <div id="default" class="cont">
+        <div id="costco" class="einkauf-inactive">
             <div id="listname" class="title-list">Costco</div>
             <input type="text" id="input" placeholder="Chicken">
             <div id="title-active" class="title-list">Please Pick Up</div>
@@ -49,8 +77,8 @@
                 <div id="empty" class="list-el">Nothing gotten yet</div>
                 <div id="empty" class="list-el-last">Nothing to get yet</div>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
-<script src="./index.js"></script>
+<script src="./index.js" type="module"></script>
 </html>

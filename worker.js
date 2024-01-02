@@ -1,7 +1,7 @@
 /* 
 Service Workers are a required component of PWAs. Without a worker that can cache files, control outgoing commands and optionally receive push notifications, PWAs are not able to be installed and used by a user.
 */
-const version = '0.3'
+const version = '0.6'
 
 const addResourcesToCache = async (resources) => {
     const cache = await caches.open(version);
@@ -50,10 +50,11 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(
         /* add any other offline resources here */
       addResourcesToCache([
-        '/einkauf/',
-        '/einkauf/index.html',
-        '/einkauf/index.css',
-        '/einkauf/index.js'
+        '/',
+        '/index.html',
+        '/index.css',
+        '/index.js',
+        '/trystero-ipfs.min.js'
       ])
     )
   })
