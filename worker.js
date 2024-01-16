@@ -1,17 +1,18 @@
 /* 
 Service Workers are a required component of PWAs. Without a worker that can cache files, control outgoing commands and optionally receive push notifications, PWAs are not able to be installed and used by a user.
 */
-const version = '0.6'
+const version = '0.9'
 
 const addResourcesToCache = async (resources) => {
     const cache = await caches.open(version);
     await cache.addAll(resources);
   };
   
-  const putInCache = async (request, response) => {
-    const cache = await caches.open(version);
-    await cache.put(request, response);
-  };
+const putInCache = async (request, response) => {
+  console.log(`putting in cache ${request.url}`)
+  const cache = await caches.open(version);
+  await cache.put(request, response);
+};
 
 const cacheFirst = async ({ request }) => {
     // First try to get the resource from the cache
